@@ -73,7 +73,7 @@ cdat<-c(
 NaClmM<-c(100,100,100)
 pH<-c(6.9,6.9,6.9)
 replicate<-c(1,1,1)
-dset<-rep(c("UCIHC"),3) # what is ucihc?
+dset<-rep(c("UCIHC"),3) # 
 tokeep<-list(     #Columns to keep (weeding out bad detectors and low angles)
   c(11:18,21:28,33:34),
   c(11:18,21:28,33:34),
