@@ -33,7 +33,7 @@ experimental.conditions <- data.frame(NaCl=c(250,125,125,
 lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior <- readRDS("./lysozyme/lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior.rds") 
 lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_diffuse_prior <- readRDS("./lysozyme/lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_diffuse_prior.rds")
 lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_dimer <- readRDS("./lysozyme/lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_dimer.rds") 
-lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_Mass <- readRDS("./lysozyme/lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_MASS.rds") 
+lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_Mass <- readRDS("./lysozyme/lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_Mass.rds") 
 lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_M12 <- readRDS("./lysozyme/lysozyme_complete_pool_constant_dndc_noconmeas_log_normal_loose_prior_M12.rds") 
 
 # pull out the DIC
