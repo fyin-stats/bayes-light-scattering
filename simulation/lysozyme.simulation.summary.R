@@ -28,7 +28,6 @@ simulation_summary_all <- rbind(simulation_summary,
 ########################################
 simulation_summary_all <- mutate(simulation_summary_all, con_error = exp(sc*1.96)-1)
 ##########
-# setwd("/Users/fan/Documents/trunk/")
 # point estimates
 p_A2_001 <- simulation_summary_all %>% filter(abs(A2)==0.01) %>% 
   ggplot(aes(x=factor(num_experiments),y=(A2_mean_post_mean-A2)/A2, color=priors, shape=priors )) + 

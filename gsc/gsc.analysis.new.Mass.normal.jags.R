@@ -1,5 +1,4 @@
 #Analysis script for gamma-S crystallin light scattering data
-#Last modified 5/16/16 by CTB
 #Meta-notes:
 #  - All data is entered in reverse temporal order (most recent to oldest)
 #
@@ -123,10 +122,6 @@ gsc_model <- function(){
 }
 #
 write.model(gsc_model, "./gsc/gsc_model_log_normal_Mass_normal.bug")
-# mle<-virialEstBoot(adat[[i]],solvent.base.RI=solvent.base.ri.meas[i],monomer.mass=monomer.mass,aggregate.size=1:3,
-#                    RI.dat=adat[-i][fit.use[fit.use!=i]],
-#                    method="MLE",use.RI.correction=FALSE, bootstrap.replicates=1,max.con.for.RI=RI.max.con)[[1]]$t0
-# print(mle["M"])
 jags.inits <- function(){
   list("dndc"=0.1985)
 }
@@ -180,14 +175,3 @@ time2 <- Sys.time()
 saveRDS(out, "./gsc/gsc_log_normal_loose_Mass_normal_post_check.rds")
 out_mcmc <- as.mcmc(out)
 
-####
-# out <- readRDS("gsc_log_normal_loose_Mass_post_check.rds")
-# out
-# out <- readRDS("gsc_log_normal_loose_post_check.rds")
-# MCMCtrace(out)
-
-# gsc_log_normal_loose_Mass_post_check <- readRDS("gsc_log_normal_loose_Mass_post_check.rds")
-# MCMCtrace(gsc_log_normal_loose_Mass_post_check)
-# #
-# out_mcmc <- as.mcmc(gsc_log_normal_loose_Mass_post_check)
-# data.frame(out_mcmc[[1]][,c("A2", "Mass")]) %>% ggplot(aes(x=A2, y=Mass)) + geom_density2d()

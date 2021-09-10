@@ -115,10 +115,6 @@ gsc_model <- function(){
 }
 #
 write.model(gsc_model, "./gsc/gsc_model_xmer_log_normal.bug")
-# mle<-virialEstBoot(adat[[i]],solvent.base.RI=solvent.base.ri.meas[i],monomer.mass=monomer.mass,aggregate.size=1:3,
-#                    RI.dat=adat[-i][fit.use[fit.use!=i]],
-#                    method="MLE",use.RI.correction=FALSE, bootstrap.replicates=1,max.con.for.RI=RI.max.con)[[1]]$t0
-# print(mle["M"])
 jags.inits <- function(){
   list("dndc"=0.1985)
 }

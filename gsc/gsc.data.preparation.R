@@ -73,7 +73,7 @@ cdat<-c(
 NaClmM<-c(100,100,100)
 pH<-c(6.9,6.9,6.9)
 replicate<-c(1,1,1)
-dset<-rep(c("UCIHC"),3) # what is ucihc?
+dset<-rep(c("UCIHC"),3) # 
 tokeep<-list(     #Columns to keep (weeding out bad detectors and low angles)
   c(11:18,21:28,33:34),
   c(11:18,21:28,33:34),
@@ -157,7 +157,6 @@ for(j in 1:length(fit.use)){
   temp_datri<-adat[[i]]$results[,ricol] # refractive index data
   temp_datri<-(temp_datri-temp_datri[1])[-1]
   temp_dndc <- temp_datri/temp_datcon
-  # temp_datri[adat[[i]]$results[-1,1]>RI.max.con]<-NA  #Remove untrustworthy observations, according to the concentration
   datri <- c(datri, temp_datri)
   cat("\n")
   cat("\n")
